@@ -14,6 +14,7 @@
 		6392067A1D29638E00E6BFBC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 639206781D29638E00E6BFBC /* LaunchScreen.storyboard */; };
 		639206851D29638E00E6BFBC /* TwoFingerGesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639206841D29638E00E6BFBC /* TwoFingerGesTests.swift */; };
 		639206901D29638E00E6BFBC /* TwoFingerGesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6392068F1D29638E00E6BFBC /* TwoFingerGesUITests.swift */; };
+		63D5275D1D2A68A100E7ABD0 /* DRMovePanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63D5275C1D2A68A100E7ABD0 /* DRMovePanView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		6392068B1D29638E00E6BFBC /* TwoFingerGesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TwoFingerGesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6392068F1D29638E00E6BFBC /* TwoFingerGesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwoFingerGesUITests.swift; sourceTree = "<group>"; };
 		639206911D29638E00E6BFBC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63D5275C1D2A68A100E7ABD0 /* DRMovePanView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DRMovePanView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				6392066F1D29638E00E6BFBC /* AppDelegate.swift */,
 				639206711D29638E00E6BFBC /* ViewController.swift */,
+				63D5275C1D2A68A100E7ABD0 /* DRMovePanView.swift */,
 				639206731D29638E00E6BFBC /* Main.storyboard */,
 				639206761D29638E00E6BFBC /* Assets.xcassets */,
 				639206781D29638E00E6BFBC /* LaunchScreen.storyboard */,
@@ -258,6 +261,7 @@
 			files = (
 				639206721D29638E00E6BFBC /* ViewController.swift in Sources */,
 				639206701D29638E00E6BFBC /* AppDelegate.swift in Sources */,
+				63D5275D1D2A68A100E7ABD0 /* DRMovePanView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,6 +488,7 @@
 				639206961D29638E00E6BFBC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		639206971D29638E00E6BFBC /* Build configuration list for PBXNativeTarget "TwoFingerGesTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +497,7 @@
 				639206991D29638E00E6BFBC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6392069A1D29638E00E6BFBC /* Build configuration list for PBXNativeTarget "TwoFingerGesUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +506,7 @@
 				6392069C1D29638E00E6BFBC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
