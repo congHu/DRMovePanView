@@ -24,6 +24,9 @@ class ViewController: UIViewController {
         drmView = DRMovePanView(frame: CGRect(x: 100, y: 100, width: 50, height: 50), gestureLocatingView: view)
         view.addSubview(drmView)
         drmView.backgroundColor = UIColor.greenColor()
+        let sbView = UIView(frame: CGRect(x: 10, y: 10, width: 20, height: 20))
+        sbView.backgroundColor = UIColor.blueColor()
+        drmView.addSubview(sbView)
     }
 
     

@@ -10,6 +10,10 @@ import UIKit
 
 class DRMovePanView: UIView {
 
+    var movable = true
+    var scaleOnMove = true
+    var scaleRatio:CGFloat = 1.1
+    
     private var touchBegin = false
     var isTouching:Bool{
         get{
@@ -55,22 +59,34 @@ class DRMovePanView: UIView {
     @objc private func timer(){
         if ges.state == .Possible{
             touchBegin = false
+            if scaleOnMove{
+                UIView.animateWithDuration(0.2, animations: {
+                    self.transform = CGAffineTransformMakeScale(1.0, 1.0)
+                })
+            }
         }
     }
     
     @objc private func panGes(sender:UIPanGestureRecognizer){
-        if touchBegin{
-            //self.center.x = sender.locationInView(sender.view).x - panOffset.x
-            //self.center.y = sender.locationInView(sender.view).y - panOffset.y
-            self.center = CGPoint(x: sender.locationInView(containedRect).x - panOffset.x, y: sender.locationInView(containedRect).y - panOffset.y)
-        }else{
-            if containedRect == nil{
-                containedRect = sender.view?.superview
+        if movable{
+            if touchBegin{
+                self.center = CGPoint(x: sender.locationInView(containedRect).x - panOffset.x, y: sender.locationInView(containedRect).y - panOffset.y)
+            }else{
+                if containedRect == nil{
+                    containedRect = sender.view?.superview
+                }
+                
+                panOffset = (sender.locationInView(containedRect).x - self.center.x, sender.locationInView(containedRect).y - self.center.y)
+                touchBegin = true
+                
+                if scaleOnMove{
+                    UIView.animateWithDuration(0.2, animations: { 
+                        self.transform = CGAffineTransformMakeScale(self.scaleRatio, self.scaleRatio)
+                    })
+                }
             }
-            
-            panOffset = (sender.locationInView(containedRect).x - self.center.x, sender.locationInView(containedRect).y - self.center.y)
-            touchBegin = true
         }
+        
     }
     
     /*
